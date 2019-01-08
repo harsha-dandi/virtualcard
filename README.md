@@ -1,1 +1,1 @@
-# I havent added unittests for the Pin validator class as I had gone past the 30 minute limit
+# I havent adoped TDD for the PinValidator class, as I had run out of allocated time
