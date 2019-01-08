@@ -1,0 +1,5 @@
+C:\Users\harsh\Source\GIT\VirtualCard\VirtualCard.Core\obj\Debug\VirtualCard.Core.csprojResolveAssemblyReference.cache
+C:\Users\harsh\Source\GIT\VirtualCard\VirtualCard.Core\bin\Debug\VirtualCard.Core.dll
+C:\Users\harsh\Source\GIT\VirtualCard\VirtualCard.Core\bin\Debug\VirtualCard.Core.pdb
+C:\Users\harsh\Source\GIT\VirtualCard\VirtualCard.Core\obj\Debug\VirtualCard.Core.dll
+C:\Users\harsh\Source\GIT\VirtualCard\VirtualCard.Core\obj\Debug\VirtualCard.Core.pdb
