@@ -37,13 +37,7 @@ namespace VirtualCard.Tests.Unit
 
             Assert.AreEqual(Decimal.MinusOne, _card.GetBalance());
         }
-
-        [Test]
-        public void TopUp_negetive_Expect_Exception()
-        {
-            Assert.Throws<ArgumentException>(() => _card.TopUp(Decimal.MinusOne));
-        }
-
+      
         [Test]
         public void TopUp_positive_Expect_CorrectBalance()
         {

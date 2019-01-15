@@ -28,29 +28,36 @@ namespace VirtualCard.Core
                 throw new ArgumentException("Input cannot be negetive");
             }
 
-            _lock.EnterWriteLock();
-            _balance -= amount;
-            _lock.ExitWriteLock();
+            this.TopUp(-amount);
         }
 
         public void TopUp(decimal amount)
         {
-            if (amount < 0)
+            try
             {
-                throw new ArgumentException("Input cannot be negetive");
+                _lock.EnterWriteLock();
+                _balance += amount;
             }
-
-            _lock.EnterWriteLock();
-            _balance += amount;
-            _lock.ExitWriteLock();
+            finally
+            {
+                _lock.ExitWriteLock();
+            }
+           
         }
 
         public decimal GetBalance()
         {
-            _lock.EnterReadLock();
-            var localbal = _balance;
-            _lock.ExitReadLock();
-
+            decimal localbal = decimal.MinValue;
+            try
+            {
+                _lock.EnterReadLock();
+                localbal = _balance;
+            }
+            finally
+            {
+                _lock.ExitReadLock();
+            }
+          
             return localbal;
         }
     }
